@@ -168,7 +168,7 @@
             <article>
                 <strong>Ahorros:</strong>
                 <br>
-                <canvas use:graph width="100%"></canvas>
+                <canvas use:graph width="100%" aria-label="Cuentas de ahorros"></canvas>
             </article>
         </aside>
     </div>

@@ -16,7 +16,7 @@
 
 <nav style="border-bottom: 1px solid var(--pico-form-element-border-color);">
     <ul>
-        <li style="font-size: 1.4rem;"><a href="#">BHD</a> <strong>Personal</strong></li>
+        <li style="font-size: 1.4rem;"><a href="/">BHD</a> <strong>Personal</strong></li>
     </ul>
     <ul>
         <li class="hide-on-small">
