@@ -22,10 +22,11 @@
 </script>
 
 <svelte:head>
-    <title>Transacciones</title>
+    <title>Transacciones | BHD </title>
 </svelte:head>
 
 <form class="container">
+    <h1>Transacciones bancarias</h1>
     <article>
         <!-- svelte-ignore a11y_label_has_associated_control -->
         <label>
