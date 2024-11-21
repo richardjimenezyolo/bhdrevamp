@@ -19,12 +19,12 @@
         <li style="font-size: 1.4rem;"><a href="#">BHD</a> <strong>Personal</strong></li>
     </ul>
     <ul>
-        <li>
+        <li class="hide-on-small">
             <a href="/" aria-current={currentPage === "/" ? "page" : false}
                 >Mis productos</a
             >
         </li>
-        <li>
+        <li class="hide-on-small">
             <a
                 href="/transactions"
                 aria-current={currentPage === "/transactions" ? "page" : false}
@@ -32,7 +32,7 @@
                 Pagos y transferencias
             </a>
         </li>
-        <li>
+        <li class="hide-on-small">
             <a href="#" aria-current={currentPage === "/3" ? "page" : false}
                 >Solicitudes y reclamaciones</a
             >
@@ -48,7 +48,7 @@
                     ></ion-icon>
                     Richard Jimenez
                 </summary>
-                <ul>
+                <ul style="z-index: 99999999;">
                     <li>
                         <a href="#" on:click={changeTheme}>🌓 Cambiar tema</a>
                     </li>
@@ -72,3 +72,12 @@
 <main>
     {@render children()}
 </main>
+
+
+<style>
+    @media screen and (max-width: 768px) {
+        .hide-on-small {
+            display: none;
+        }
+    }
+</style>

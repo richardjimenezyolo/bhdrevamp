@@ -25,8 +25,8 @@
     <title>Transacciones</title>
 </svelte:head>
 
-<form style="display: flex; justify-content: center;">
-    <article style="width: 50%;">
+<form class="container">
+    <article>
         <!-- svelte-ignore a11y_label_has_associated_control -->
         <label>
             Tipo de transacción:

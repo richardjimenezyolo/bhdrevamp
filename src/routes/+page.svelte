@@ -2,7 +2,7 @@
     import Chart from "chart.js/auto";
 
     let quickOptions = [
-        { text: "Transacciones entre mis productos", icon: "cash-outline" },
+        { text: "Transacciones entre mis productos", icon: "cash-outline", href: '/transactions' },
         { text: "Pago de servicios e impuestos", icon: "bulb-outline" },
         {
             text: "Transacciones entre productos BHD y otros bancos",
@@ -55,17 +55,17 @@
                 datasets: [
                     {
                         label: "Richard Jimenez",
-                        data: [12, 19, 3, 5, 2, 3].map(el => el * 1000),
+                        data: [12, 19, 3, 5, 2, 3].map((el) => el * 1000),
                         borderWidth: 1,
-                        backgroundColor: '#398712',
-                        borderColor: '#398712'
+                        backgroundColor: "#398712",
+                        borderColor: "#398712",
                     },
                     {
                         label: "Personal",
-                        data: [12, 19, 3, 5, 2, 3].map(el => el * 5000),
+                        data: [12, 19, 3, 5, 2, 3].map((el) => el * 5000),
                         borderWidth: 1,
-                        backgroundColor: '#D24317',
-                        borderColor: '#D24317'
+                        backgroundColor: "#D24317",
+                        borderColor: "#D24317",
                     },
                 ],
             },
@@ -82,7 +82,7 @@
         <article>
             <header><h3>Resumen de Productos</h3></header>
 
-            <details open>
+            <details class="overflow-auto" open>
                 <summary>CUENTAS (2)</summary>
                 <table>
                     <tbody>
@@ -114,24 +114,26 @@
             <details open>
                 <summary>TARJETAS DE CRÉDITO</summary>
 
-                <table>
-                    <tbody>
-                        <tr>
-                            <td style="width: 274px;">
-                                <p style="width: 274px;">
-                                    PORKHE ME LO MEREZCO 😜
-                                </p>
-                                <small>
-                                    <a href="#">2970016459</a>
-                                </small>
-                            </td>
-                            <td>Ahorros <br /> activa</td>
-                            <td class="text-right">
-                                <span>RD$ -30,000</span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="overflow-auto">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td style="width: 274px;">
+                                    <p style="width: 274px;">
+                                        PORKHE ME LO MEREZCO 😜
+                                    </p>
+                                    <small>
+                                        <a href="#">2970016459</a>
+                                    </small>
+                                </td>
+                                <td>Ahorros <br /> activa</td>
+                                <td class="text-right">
+                                    <span>RD$ -30,000</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </details>
         </article>
     </div>
@@ -146,7 +148,7 @@
                         {#each quickOptions as op}
                             <li>
                                 <a
-                                    href="#"
+                                    href={op.href || '#'}
                                     style="display:flex; align-items: center;"
                                 >
                                     <ion-icon
@@ -164,6 +166,8 @@
             </article>
 
             <article>
+                <strong>Ahorros:</strong>
+                <br>
                 <canvas use:graph width="100%"></canvas>
             </article>
         </aside>
@@ -171,7 +175,6 @@
 </section>
 
 <style>
-
     .col-1 {
         grid-column-start: 1;
         grid-column-end: 3;
